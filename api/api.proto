@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = "grpc-bench/api";
+
+package api;
+
+
+service Ping {
+      rpc ResolvePing (PingRequest) returns (PingReply) {}
+}
+
+message PingRequest {
+      string msg = 1;
+}
+
+message PingReply {
+      string msg = 1;
+}
